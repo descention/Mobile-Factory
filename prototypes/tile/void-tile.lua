@@ -14,7 +14,7 @@ vtI.icon = "__Mobile_Factory_Graphics__/graphics/icons/VoidTileI.png"
 vtI.icon_size = 128
 vtI.subgroup = "Tiles"
 vtI.order = "b"
-vtI.stack_size = 1000
+vtI.stack_size = 200
 vtI.place_as_tile =
     {
       result = "VoidTile",

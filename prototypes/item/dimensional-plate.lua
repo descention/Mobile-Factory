@@ -6,7 +6,7 @@ dpI.icon = "__Mobile_Factory_Graphics__/graphics/icons/DimensionalPlate.png"
 dpI.icon_size = 32
 dpI.subgroup = "Resources"
 dpI.order = "d"
-dpI.stack_size = 1000
+dpI.stack_size = 200
 data:extend{dpI}
 
 -- Recipe --

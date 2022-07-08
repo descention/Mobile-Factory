@@ -10,7 +10,7 @@ hcI.fuel_category = "chemical"
 hcI.fuel_value = "15MJ"
 hcI.subgroup = "Resources"
 hcI.order = "i"
-hcI.stack_size = 1000
+hcI.stack_size = 200
 data:extend{hcI}
 
 -- Recipe --

@@ -10,7 +10,7 @@ ocI.fuel_category = "chemical"
 ocI.fuel_value = "15MJ"
 ocI.subgroup = "Resources"
 ocI.order = "h"
-ocI.stack_size = 1000
+ocI.stack_size = 200
 data:extend{ocI}
 
 -- Recipe --

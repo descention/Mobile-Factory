@@ -23,7 +23,7 @@ dtI.icon = "__Mobile_Factory_Graphics__/graphics/icons/DimensionalTileI.png"
 dtI.icon_size = 128
 dtI.subgroup = "Tiles"
 dtI.order = "c"
-dtI.stack_size = 1000
+dtI.stack_size = 200
 dtI.place_as_tile =
     {
       result = "DimensionalTile",

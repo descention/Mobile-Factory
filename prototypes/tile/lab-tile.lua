@@ -8,7 +8,7 @@ ltI.icon = "__Mobile_Factory_Graphics__/graphics/icons/labTileI.png"
 ltI.icon_size = 128
 ltI.subgroup = "Tiles"
 ltI.order = "a"
-ltI.stack_size = 1000
+ltI.stack_size = 200
 ltI.place_as_tile =
     {
       result = "tutorial-grid",
