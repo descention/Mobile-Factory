@@ -538,11 +538,6 @@ function RCL.collectResources(obj)
     -- Do the job for all Resources inside the Table --
     for _, resourcesPath in pairs(obj.resourcesTable) do
 
-		-- Skip resource if it doesn't have a projectile --
-		if game.entity_prototypes["RCLProjectile:" .. resourcesPath.name] == nil then
-			break
-		end
-
 		-- Stop if we are out of Quatron --
 		if quatron < 3 then
 			obj.outOfQuatron = true
@@ -568,6 +563,12 @@ function RCL.collectResources(obj)
         local added = 0
 		local isFluid = false
         for _, product in pairs(global.ResourcesProductsTable[resourcesPath.name]) do
+
+			-- Skip resource if it doesn't have a projectile --
+			if game.entity_prototypes["RCLProjectile:" .. product.name] == nil then
+				break
+			end
+
 			-- Calculate how many products can be extracted --
 			local amount = product.amount or math.random(product.min, product.max)
 			local inserted = 0
