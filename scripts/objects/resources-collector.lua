@@ -538,6 +538,11 @@ function RCL.collectResources(obj)
     -- Do the job for all Resources inside the Table --
     for _, resourcesPath in pairs(obj.resourcesTable) do
 
+		-- Skip resource if it doesn't have a projectile --
+		if game.entity_prototypes["RCLProjectile:" .. resourcesPath.name] == nil then
+			break
+		end
+
 		-- Stop if we are out of Quatron --
 		if quatron < 3 then
 			obj.outOfQuatron = true
@@ -583,7 +588,9 @@ function RCL.collectResources(obj)
 				-- Register the amount inserted if this is the main Product --
 				added = math.max(inserted, added)
 				-- Create the Projectile --
-				obj.ent.surface.create_entity{name="RCLProjectile:" .. product.name, position=resourcesPath.position, target=obj.ent, speed=0.1, max_range=999, force=obj.ent.force}
+				if game.entity_prototypes["RCLProjectile:" .. product.name] ~= nil then
+					obj.ent.surface.create_entity{name="RCLProjectile:" .. product.name, position=resourcesPath.position, target=obj.ent, speed=0.1, max_range=999, force=obj.ent.force}
+				end
 				obj.inventoryFull = false
 			else
 				obj.inventoryFull = true
@@ -947,7 +954,9 @@ end
 function RCL.createOreBeam(obj, itemName, target)
 	local positionX = obj.ent.position.x + (math.random(-200, 200)/100)
 	local positionY = obj.ent.position.y + (math.random(-200, 200)/100)
-	obj.ent.surface.create_entity{name="RCLProjectile:" .. itemName, position={positionX,positionY}, target=target, speed=0.25, max_range=999, force=obj.ent.force}
+	if game.entity_prototypes["RCLProjectile:" .. itemName] ~= nil then
+		obj.ent.surface.create_entity{name="RCLProjectile:" .. itemName, position={positionX,positionY}, target=target, speed=0.25, max_range=999, force=obj.ent.force}
+	end
 end
 
 -- Add Quatron (Return the amount added) --
