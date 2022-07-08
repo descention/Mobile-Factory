@@ -589,20 +589,6 @@ data:extend{
 	}
 }
 
-
--------------------- SET ORES STACK TO 1000 --------------------
-function setStackTo1000(itemName)
-	local item = data.raw.item[itemName]
-	item.stack_size = 1000
-end
-
-setStackTo1000("coal")
-setStackTo1000("copper-ore")
-setStackTo1000("iron-ore")
-setStackTo1000("stone")
-setStackTo1000("uranium-ore")
-
-
 -------------------- SHORTCUTS --------------------
 data:extend{
 	{
